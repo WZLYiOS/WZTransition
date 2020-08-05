@@ -1,0 +1,18 @@
+PODS:
+  - WZTransition (1.1.0):
+    - WZTransition/Source (= 1.1.0)
+  - WZTransition/Source (1.1.0)
+
+DEPENDENCIES:
+  - WZTransition (from `../`)
+
+EXTERNAL SOURCES:
+  WZTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WZTransition: 0ae009a17da35e4e6a27539d1d95bf5536d3936b
+
+PODFILE CHECKSUM: cf8cb8ed58b01a1dd24a663232a723fba8d728ef
+
+COCOAPODS: 1.7.5

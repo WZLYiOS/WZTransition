@@ -1,0 +1,6 @@
+framework module WZTransition {
+  umbrella header "WZTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+framework module WZTransition {
+  umbrella header "WZTransition-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module WZTransition.Swift {
+    header "WZTransition-Swift.h"
+    requires objc
+}

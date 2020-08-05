@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WZTransition_Example' do
+  pod 'WZTransition', :path => '../'
+
+  target 'WZTransition_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
