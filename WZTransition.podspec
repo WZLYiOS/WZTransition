@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'WZTransition'
-  s.version          = '2.1.1'
+  s.version          = '2.1.2'
   s.summary          = 'WZTransition转场动画'
 
   s.description      = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   end
 
 
-  s.subspec 'Binary' do |ss|
-    ss.vendored_frameworks = "Carthage/Build/iOS/Static/WZTransition.framework"
-    ss.user_target_xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)' }
-  end
+#  s.subspec 'Binary' do |ss|
+#    ss.vendored_frameworks = "Carthage/Build/iOS/Static/WZTransition.framework"
+#    ss.user_target_xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)' }
+#  end
 end
 
