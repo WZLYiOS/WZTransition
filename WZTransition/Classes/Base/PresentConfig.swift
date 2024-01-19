@@ -36,6 +36,9 @@ public protocol Config {
     
     /// 背景遮罩
     var maskViewBackgroundColor: UIColor? { get set }
+    
+    /// 是否全屏 非全屏的话，可能会在tabbar下面
+    var shouldPresentInFullscreen: Bool? { get set }
 }
 
 

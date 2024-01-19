@@ -87,7 +87,7 @@ public class BasePresentationController: UIPresentationController {
     
     /// 是否全屏
     public override var shouldPresentInFullscreen: Bool {
-        return false
+        return config.shouldPresentInFullscreen ?? true
     }
     
     /// shouldRemovePresentersView

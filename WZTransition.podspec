@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'WZTransition'
-  s.version          = '2.1.3'
+  s.version          = '2.1.4'
   s.summary          = 'WZTransition转场动画'
 
   s.description      = <<-DESC

@@ -109,8 +109,8 @@ extension ViewController: UITableViewDelegate {
         second.presentAnimator = WZPresentAnimator(second)
         second.presentAnimator.dialog { (config) in
             config.dialogType = .preferSize
-            config.animateType = .alpha(from: 0.0, to: 1.0)
-            config.duration = 0.3
+            config.animateType = .scale(x: 1, y: 1)
+            config.duration = 0.5
             config.isShowMask = true
         }
         self.present(second, animated: true, completion: nil)
@@ -119,15 +119,25 @@ extension ViewController: UITableViewDelegate {
     
     private func dialog(direction: DirectionType) {
         
-        let second = SecondViewController()
-        second.presentAnimator = WZPresentAnimator(second)
-        second.presentAnimator.dialog { (config) in
+//        let second = SecondViewController()
+//        second.presentAnimator = WZPresentAnimator(second)
+//        second.presentAnimator.dialog { (config) in
+//            config.dialogType = .preferSize
+//            config.animateType = .direction(type: direction)
+//            config.duration = 0.3
+//            config.isShowMask = true
+//        }
+//        self.present(second, animated: true, completion: nil)
+        
+        let navVc = WZNavigationViewController(rootViewController: ThreeViewController())
+        navVc.presentAnimator = WZPresentAnimator(navVc)
+        navVc.presentAnimator.dialog { (config) in
             config.dialogType = .preferSize
             config.animateType = .direction(type: direction)
             config.duration = 0.3
             config.isShowMask = true
         }
-        self.present(second, animated: true, completion: nil)
+        self.present(navVc, animated: true, completion: nil)
     }
     
     

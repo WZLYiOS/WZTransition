@@ -73,5 +73,8 @@ public class MenuConfig: PresentConfig  {
     
     /// 拖拽完成阀值
     public var draggableCompletedPrecent: CGFloat = 0.5
+    
+    /// 菜单默认
+    public var shouldPresentInFullscreen: Bool? = true
 }
 

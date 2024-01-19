@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281C52722B5A6DAA002D2B83 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C52712B5A6DAA002D2B83 /* TabBarController.swift */; };
+		282E74532681EC6D00533A23 /* WZNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282E74522681EC6D00533A23 /* WZNavigationViewController.swift */; };
+		289E220E26A973BA001F5AC5 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E220D26A973BA001F5AC5 /* ThreeViewController.swift */; };
+		289E221026AA5C74001F5AC5 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289E220F26AA5C74001F5AC5 /* FourViewController.swift */; };
 		3456C7986C3FF86AFE0A678C /* Pods_WZTransition_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279D121F53255EA4B2846A46 /* Pods_WZTransition_Tests.framework */; };
 		3BE80BA35A913BB56C60B0DB /* Pods_WZTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44926AF8F2A41B8566B60DA9 /* Pods_WZTransition_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		0B413B6A2742B12B122A8401 /* Pods-WZTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZTransition_Tests.release.xcconfig"; path = "Target Support Files/Pods-WZTransition_Tests/Pods-WZTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		279D121F53255EA4B2846A46 /* Pods_WZTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZTransition_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		281C52712B5A6DAA002D2B83 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		282E74522681EC6D00533A23 /* WZNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNavigationViewController.swift; sourceTree = "<group>"; };
+		289E220D26A973BA001F5AC5 /* ThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
+		289E220F26AA5C74001F5AC5 /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		44926AF8F2A41B8566B60DA9 /* Pods_WZTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* WZTransition_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZTransition_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,8 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				806F827C2304FDC3001C92C0 /* SecondViewController.swift */,
+				289E220F26AA5C74001F5AC5 /* FourViewController.swift */,
+				289E220D26A973BA001F5AC5 /* ThreeViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				282E74522681EC6D00533A23 /* WZNavigationViewController.swift */,
+				281C52712B5A6DAA002D2B83 /* TabBarController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -319,7 +331,11 @@
 			files = (
 				806F827D2304FDC3001C92C0 /* SecondViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				289E221026AA5C74001F5AC5 /* FourViewController.swift in Sources */,
+				282E74532681EC6D00533A23 /* WZNavigationViewController.swift in Sources */,
+				281C52722B5A6DAA002D2B83 /* TabBarController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				289E220E26A973BA001F5AC5 /* ThreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
