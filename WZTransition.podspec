@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary          = 'WZTransition转场动画'
 
   s.description      = <<-DESC
-    深圳我主良缘有限公司,Dialog以及Menu过渡动画
+   Dialog以及Menu过渡动画
                        DESC
 
   s.homepage         = 'https://github.com/WZLYiOS/WZTransition'
