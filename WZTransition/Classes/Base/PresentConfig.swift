@@ -39,6 +39,8 @@ public protocol Config {
     
     /// 是否全屏 非全屏的话，可能会在tabbar下面
     var shouldPresentInFullscreen: Bool? { get set }
+    
+    var shouldRemovePresentersView: Bool? { get set }
 }
 
 

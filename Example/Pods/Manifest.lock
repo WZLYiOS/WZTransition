@@ -1,7 +1,7 @@
 PODS:
-  - WZTransition (1.1.0):
-    - WZTransition/Source (= 1.1.0)
-  - WZTransition/Source (1.1.0)
+  - WZTransition (2.1.4):
+    - WZTransition/Source (= 2.1.4)
+  - WZTransition/Source (2.1.4)
 
 DEPENDENCIES:
   - WZTransition (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WZTransition: 0ae009a17da35e4e6a27539d1d95bf5536d3936b
+  WZTransition: d79d0529db6910ce71a859c4dd073c2d7c5585f1
 
 PODFILE CHECKSUM: cf8cb8ed58b01a1dd24a663232a723fba8d728ef
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.12.1

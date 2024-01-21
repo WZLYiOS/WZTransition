@@ -33,7 +33,6 @@ public enum DialogAnimateType {
 /// 弹出框配置
 public class DialogConfig: PresentConfig  {
    
-
     /// 呈现规模
     public var presentingScale: CGFloat = 1.0
     
@@ -69,5 +68,7 @@ public class DialogConfig: PresentConfig  {
     
     /// 默认全屏
     public var shouldPresentInFullscreen: Bool? = true
+    
+    public var shouldRemovePresentersView: Bool? = false
 }
 

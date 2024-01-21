@@ -43,27 +43,25 @@ platform :ios do
     # 所有需要提交的文件路径
     paths = [podspec_path]
     
+    # 添加 podspec 和 framework
+    git_add(path: paths)
+    message = options[:message]
+
+    if message.nil?
+      message = "#{podspec_name} 发布 #{target_version} 版本"
+     end
+
+    # 提交 podspec 和 framework
+    git_commit(path: paths, message: message)
+
+    # 推送到远程
+    push_to_git_remote
+
     
     # 添加标签
     if !git_tag_exists(tag: target_version)
-
-
-        # 添加 podspec 和 framework
-        git_add(path: paths)
-
-         message = options[:message]
-
-        if message.nil?
-          message = "#{podspec_name} 发布 #{target_version} 版本"
-        end
-
-        # 提交 podspec 和 framework
-        git_commit(path: paths, message: message)
-
-        # 推送到远程
-        push_to_git_remote
-
-        add_git_tag tag: target_version
+      # 删除对应 tag
+      add_git_tag tag: target_version
     end
 
     # 推送标签

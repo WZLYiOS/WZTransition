@@ -15,12 +15,11 @@ public class BasePresentationController: UIPresentationController {
     internal var config: PresentConfig!
     
     /// 初始化
-    public convenience init(presentedViewController: UIViewController, presenting
+    public init(presentedViewController: UIViewController, presenting
         presentingViewController: UIViewController? ,
                             config:PresentConfig) {
-        
-        self.init(presentedViewController: presentedViewController, presenting: presentingViewController)
         self.config = config
+        super.init(presentedViewController: presentedViewController, presenting: presentingViewController)
     }
     
     
@@ -92,7 +91,7 @@ public class BasePresentationController: UIPresentationController {
     
     /// shouldRemovePresentersView
     public override var shouldRemovePresentersView: Bool {
-        return false
+        return config.shouldRemovePresentersView ?? false
     }
     
     /// 视图将过渡

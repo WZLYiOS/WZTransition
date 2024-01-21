@@ -76,5 +76,7 @@ public class MenuConfig: PresentConfig  {
     
     /// 菜单默认
     public var shouldPresentInFullscreen: Bool? = true
+    
+    public var shouldRemovePresentersView: Bool? = false
 }
 
