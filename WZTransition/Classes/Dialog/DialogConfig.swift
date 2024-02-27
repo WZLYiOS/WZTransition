@@ -10,6 +10,7 @@ import UIKit
 
 /// 对话框类型
 public enum DialogType {
+    case nomar      // 默认全屏
     case preferSize //preferredContentSize
     case size(s: CGSize) //Custom Size
 }
@@ -49,7 +50,7 @@ public class DialogConfig: PresentConfig  {
     public var duration: TimeInterval = 0.3
     
     /// 对话框类型
-    public var dialogType: DialogType = DialogType.preferSize
+    public var dialogType: DialogType = DialogType.nomar
     
     /// 动画类型
     public var animateType: DialogAnimateType = .alpha(from: 0, to: 1)

@@ -21,6 +21,12 @@ public class DialogPresentationController: BasePresentationController {
         }, completion: nil)
     }
     
+    public override func presentationTransitionWillBegin() {
+        super.presentationTransitionWillBegin()
+        if let type = config as? DialogConfig, let c = presentedView {
+            c.insertSubview(maskView, at: 0)
+        }
+    }
     
     /// 如果你不希望被呈现的 View 占据了整个屏幕，可以调整它的frame
     public override var frameOfPresentedViewInContainerView: CGRect {
@@ -30,17 +36,24 @@ public class DialogPresentationController: BasePresentationController {
                 let height = frame.height
                 switch (config as! DialogConfig).dialogType {
                 case .preferSize:
-                    let presentedSize = self.presentedViewController.preferredContentSize
+                    var presentedSize = self.presentedViewController.preferredContentSize
+                    if presentedSize.width == 0 {
+                        presentedSize = CGSize(width: width, height: height)
+                    }
                     return CGRect(x: (width - presentedSize.width) / 2,
                                   y: (height - presentedSize.height) / 2,
                                   width: presentedSize.width,
                                   height: presentedSize.height)
                 case .size(let s):
-                    
                     return CGRect(x: (width - s.width) / 2,
                                   y: (height - s.height) / 2,
                                   width: s.width,
                                   height: s.height)
+                case .nomar:
+                    return CGRect(x: 0,
+                                  y: 0,
+                                  width: width,
+                                  height: height)
                 }
             } else if let f = self.presentedView?.frame {
                 return f

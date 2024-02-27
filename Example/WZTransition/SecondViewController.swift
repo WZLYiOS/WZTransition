@@ -18,6 +18,9 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presentAnimator.config?.gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        presentAnimator.config?.maskViewBackgroundColor = UIColor.orange
         navigationItem.title = "2级页面"
         view.backgroundColor = .red
         button.backgroundColor = UIColor.blue
@@ -37,22 +40,22 @@ class SecondViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // 手势点击
-    @objc public func tapGestureRecognizer() {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    // 大小自定义(这边自定义不影响上面用autolayout来布局)
-    override var preferredContentSize: CGSize {
-        get {
-            return CGSize(width: 300, height: 500)
-        }
-        set { super.preferredContentSize = newValue }
-    }
+////    // 大小自定义(这边自定义不影响上面用autolayout来布局)
+//    override var preferredContentSize: CGSize {
+//        get {
+////            return CGSize(width: 300, height: 500)
+//            return UIScreen.main.bounds.size
+//        }
+//        set { super.preferredContentSize = newValue }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc private func tapAction(tap: UITapGestureRecognizer) {
+        debugPrint("213123123");
     }
 }
 

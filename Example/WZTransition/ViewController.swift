@@ -129,7 +129,8 @@ extension ViewController: UITableViewDelegate {
 //        }
 //        self.present(second, animated: true, completion: nil)
         
-        let navVc = WZNavigationViewController(rootViewController: ThreeViewController())
+//        let navVc = WZNavigationViewController(rootViewController: ThreeViewController())
+        let navVc = SecondViewController()
         navVc.presentAnimator = WZPresentAnimator(navVc)
         navVc.presentAnimator.dialog { (config) in
             config.dialogType = .preferSize
