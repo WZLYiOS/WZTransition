@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name             = 'WZTransition'
   s.version          = '2.1.7'
-  s.summary          = 'WZTransition转场动画，自定义全屏或者半屏，asd'
+  s.summary          = 'WZTransition转场动画，自定义全屏或者半屏，d'
 
   s.description      = <<-DESC
    Dialog以及Menu过渡动画
