@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'WZTransition'
-  s.version          = '2.1.6'
+  s.version          = '2.1.7'
   s.summary          = 'WZTransition转场动画，自定义全屏或者半屏，asd'
 
   s.description      = <<-DESC

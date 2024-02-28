@@ -14,8 +14,10 @@ public class DialogPresentationController: BasePresentationController {
     
     /// dismissalTransitionWillBegin
     public override func dismissalTransitionWillBegin() {
-        
         super.dismissalTransitionWillBegin()
+        if let c = containerView, maskView.superview != c {
+            c.insertSubview(maskView, at: 0)
+        }
         self.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (context) in
             self.presentingViewController.view.transform = .identity
         }, completion: nil)
@@ -23,8 +25,13 @@ public class DialogPresentationController: BasePresentationController {
     
     public override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
-        if let type = config as? DialogConfig, let c = presentedView {
-            c.insertSubview(maskView, at: 0)
+        switch (config as! DialogConfig).dialogType {
+        case .nomar:
+            if let c = presentedView {
+                c.insertSubview(maskView, at: 0)
+            }
+        default:
+            break
         }
     }
     
