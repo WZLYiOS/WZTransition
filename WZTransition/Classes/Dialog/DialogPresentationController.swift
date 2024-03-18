@@ -25,14 +25,6 @@ public class DialogPresentationController: BasePresentationController {
     
     public override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
-        switch (config as! DialogConfig).dialogType {
-        case .nomar:
-            if let c = presentedView {
-                c.insertSubview(maskView, at: 0)
-            }
-        default:
-            break
-        }
     }
     
     /// 如果你不希望被呈现的 View 占据了整个屏幕，可以调整它的frame

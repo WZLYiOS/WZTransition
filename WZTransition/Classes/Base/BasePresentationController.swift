@@ -63,7 +63,17 @@ public class BasePresentationController: UIPresentationController {
         
         self.presentingViewController.transitionCoordinator?.animate(alongsideTransition: { (context) in
             self.presentingViewController.view.transform = CGAffineTransform(scaleX: self.config.presentingScale, y: self.config.presentingScale)
-        }, completion: nil)
+        }, completion: { [weak self]_ in
+            guard let self = self else { return  }
+            switch (config as! DialogConfig).dialogType {
+            case .nomar:
+                if let c = presentedView {
+                    c.insertSubview(maskView, at: 0)
+                }
+            default:
+                break
+            }
+        })
     }
     
     
